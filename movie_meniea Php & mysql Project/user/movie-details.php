@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from pixner.net/boleto/demo/movie-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2024 11:30:24 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Boleto - Online Ticket Booking Website HTML Template</title>
+
+
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    <?php
+    include('nav.php');
+    ?>
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <?php
+    // Connect to the database
+    // Database connection
+    include 'connection.php';
+    // Check if an ID is passed
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+
+        // Fetch movie details
+        $result = mysqli_query($conn, "SELECT * FROM tbl_movie WHERE movie_id = $id");
+
+        if ($result->num_rows > 0) {
+            $movie = $result->fetch_assoc();
+            // echo "<h1>" . $movie['title'] . "</h1>";
+            // echo "<p><strong>Director:</strong> " . $movie['director'] . "</p>";
+            // echo "<p><strong>Release Year:</strong> " . $movie['release_year'] . "</p>";
+            // echo "<p><strong>Genre:</strong> " . $movie['genre'] . "</p>";
+            // echo "<p><strong>Description:</strong> " . $movie['description'] . "</p>";
+            ?>
+            <section class="details-banner bg_img" data-background="<?php echo $movie['image']; ?>  ">
+                <div class="container">
+                    <div class="details-banner-wrapper">
+                        <a href="">
+                            <div class="details-banner-thumb">
+                                <img src="<?php echo $movie['image']; ?>" alt="movie">
+                                <a href="<?php echo $movie['video_url']; ?>" target="_blank" class="video-popup">
+                                    <img src="assets/images/movie/video-button.png" alt="movie">
+                                </a>
+                            </div>
+                        </a>
+                        <div class="details-banner-content offset-lg-3">
+                            <h2 class="title"><?php echo $movie['movie_name']; ?></h2>
+                            <br>
+                            <p>
+                                <?php echo $movie['desc']; ?>
+                            </p>
+                            <div class="tags">
+                                <a href="#0">Release Date: <?php echo $movie['release_date']; ?></a>
+
+                            </div>
+                            <a href="#0" class="button">horror</a>
+                            <div class="social-and-duration">
+                                <div class="duration-area">
+                                    <div class="item">
+                                        <i class="fas fa-calendar-alt"></i><span>06 Dec, 2020</span>
+                                    </div>
+                                    <div class="item">
+                                        <i class="far fa-clock"></i><span>2 hrs 50 mins</span>
+                                    </div>
+                                </div>
+                                <ul class="social-share">
+                                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php
+        } else {
+            echo "Movie not found.";
+        }
+    } else {
+        echo "No movie ID provided.";
+    }
+    ?>
+
+
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Book-Section========== -->
+    <section class="book-section bg-one">
+        <div class="container">
+            <div class="book-wrapper offset-lg-3">
+                <div class="left-side">
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="thumb">
+
+                            </div>
+                            <div class="counter-area">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="thumb">
+
+                            </div>
+                            <div class="counter-area">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="rated rate-it">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h5 class="title">0.0</h5>
+                        </div>
+                        <p><a href="#0">Rate It</a></p>
+                    </div>
+                </div>
+                <!-- <a href="register.php" class="custom-button">book tickets</a> -->
+            </div>
+        </div>
+    </section>
+    <!-- ==========Book-Section========== -->
+
+    <!-- theater section -->
+    <?php include 'connection.php'; ?>
+    <?php $s = mysqli_query($conn, "select DISTINCT theatre_id from tbl_shows where movie_id='" . $movie['movie_id'] . "'");
+    if (mysqli_num_rows($s)) { ?>
+        <div class="ticket-plan-section padding-bottom padding-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 mb-5 mb-lg-0">
+                        <ul class="seat-plan-wrapper bg-five">
+                            <li>
+                                <?php
+
+
+
+                                while ($shw = mysqli_fetch_array($s)) {
+
+                                    $t = mysqli_query($conn, "select * from tbl_theatre where id='" . $shw['theatre_id'] . "'");
+                                    $theatre = mysqli_fetch_array($t);
+                                    ?>
+                                    <div class="movie-name">
+                                        <div class="icons">
+                                            <i class="far fa-heart"></i>
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <a href="#0" class="name"><?php echo $theatre['name']; ?></a>
+                                        <a href="#0" class="name"><?php echo $theatre['place']; ?></a>
+                                        <div class="location-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="movie-schedule">
+                                        <?php $tr = mysqli_query($conn, "select * from tbl_shows where movie_id='" . $movie['movie_id'] . "' and theatre_id='" . $shw['theatre_id'] . "'");
+                                        while ($shh = mysqli_fetch_array($tr)) {
+                                            $ttm = mysqli_query($conn, "select  * from tbl_show_time where st_id='" . $shh['st_id'] . "'");
+                                            $ttme = mysqli_fetch_array($ttm);
+                                            ?>
+                                            <a
+                                                href="movie-checkout.php?show=<?php echo $shh['s_id']; ?>&movie=<?php echo $shh['movie_id']; ?>&theatre=<?php echo $shw['theatre_id']; ?>">
+
+                                                <div class="item">
+                                                    <?php echo date('h:i A', strtotime($ttme['start_time'])); ?>
+                                                </div>
+                                            </a>
+
+                                        <?php
+                                        }
+
+                                        ?>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-10">
+                        <div class="widget-1 widget-banner">
+                            <div class="widget-1-body">
+                                <a href="#0">
+                                    <img src="assets/images/sidebar/banner/banner03.jpg" alt="banner">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
+    <!-- theater section -->
+
+    <!-- ==========Movie-Section========== -->
+    <!-- <section class="movie-details-section padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-center flex-wrap-reverse mb--50">
+                <div class="col-lg-3 col-sm-10 col-md-6 mb-50">
+                    <div class="widget-1 widget-tags">
+
+                    </div>
+                    <div class="widget-1 widget-offer">
+
+                        <div class="offer-body">
+                            <div class="offer-item">
+                                <div class="thumb">
+                                    <div class="widget-1 widget-banner">
+                                        <div class="widget-1-body">
+                                            <a href="#0">
+                                                <img src="assets/images/sidebar/banner/9668f8e1f4fd6ddce8f85511a5a22671.jpg"
+                                                    alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h6>
+
+                                    </h6>
+
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <div class="thumb">
+
+                                </div>
+                                <div class="content">
+                                    <h6>
+
+                                    </h6>
+
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <div class="thumb">
+
+                                </div>
+                                <div class="content">
+                                    <h6>
+
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-1 widget-banner">
+                        <div class="widget-1-body">
+                            <a href="#0">
+                                <img src="assets/images/sidebar/banner/woman-sports-wear-fashion-sale-shop-store-ad-design-template-8843cd2ac8f9fcd7d9911d3afd7a3e10_screen.jpg"
+                                    alt="banner">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 mb-50">
+                    <div class="movie-details">
+                        <h3 class="title">photos</h3>
+                        <div class="details-photos owl-carousel">
+                            <div class="thumb">
+                                <a href="assets/images/movie/movie-details01.jpg" class="img-pop">
+                                    <img src="assets/images/movie/movie-details01.jpg" alt="movie">
+                                </a>
+                            </div>
+                            <div class="thumb">
+                                <a href="assets/images/movie/movie-details02.jpg" class="img-pop">
+                                    <img src="assets/images/movie/movie-details02.jpg" alt="movie">
+                                </a>
+                            </div>
+                            <div class="thumb">
+                                <a href="assets/images/movie/movie-details03.jpg" class="img-pop">
+                                    <img src="assets/images/movie/movie-details03.jpg" alt="movie">
+                                </a>
+                            </div>
+                            <div class="thumb">
+                                <a href="assets/images/movie/movie-details01.jpg" class="img-pop">
+                                    <img src="assets/images/movie/movie-details01.jpg" alt="movie">
+                                </a>
+                            </div>
+                            <div class="thumb">
+                                <a href="assets/images/movie/movie-details02.jpg" class="img-pop">
+                                    <img src="assets/images/movie/movie-details02.jpg" alt="movie">
+                                </a>
+                            </div>
+                            <div class="thumb">
+                                <a href="assets/images/movie/movie-details03.jpg" class="img-pop">
+                                    <img src="assets/images/movie/movie-details03.jpg" alt="movie">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab summery-review">
+                            <ul class="tab-menu">
+                                <li class="active">
+                                    summery
+                                </li>
+                                <li>
+                                    user review <span>147</span>
+                                </li>
+                            </ul>
+                            <div class="tab-area">
+                                <div class="tab-item active">
+                                    <div class="item">
+                                        <h5 class="sub-title">Synopsis</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula eros
+                                            sit amet est tincidunt aliquet. Fusce laoreet ligula ac ultrices eleifend.
+                                            Donec hendrerit fringilla odio, ut feugiat mi convallis nec. Fusce elit ex,
+                                            blandit vitae mattis sit amet, iaculis ac elit. Ut diam mauris, viverra sit
+                                            amet dictum vel, aliquam ac quam. Ut mi nisl, fringilla sit amet erat et,
+                                            convallis porttitor ligula. Sed auctor, orci id luctus venenatis, dui dolor
+                                            euismod risus, et pharetra orci lectus quis sapien. Duis blandit ipsum ac
+                                            consectetur scelerisque. </p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="header">
+                                            <h5 class="sub-title">cast</h5>
+                                            <div class="navigation">
+                                                <div class="cast-prev"><i
+                                                        class="flaticon-double-right-arrows-angles"></i></div>
+                                                <div class="cast-next"><i
+                                                        class="flaticon-double-right-arrows-angles"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="casting-slider owl-carousel">
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast01.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">Bill Hader</a></h6>
+                                                    <span class="cate">actor</span>
+                                                    <p>As Richie Tozier</p>
+                                                </div>
+                                            </div>
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast02.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">nora hardy</a></h6>
+                                                    <span class="cate">actor</span>
+                                                    <p>As raven</p>
+                                                </div>
+                                            </div>
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast03.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">alvin peters</a></h6>
+                                                    <span class="cate">actor</span>
+                                                    <p>As magneto</p>
+                                                </div>
+                                            </div>
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast04.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">josh potter</a></h6>
+                                                    <span class="cate">actor</span>
+                                                    <p>As quicksilver</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="header">
+                                            <h5 class="sub-title">crew</h5>
+                                            <div class="navigation">
+                                                <div class="cast-prev-2"><i
+                                                        class="flaticon-double-right-arrows-angles"></i></div>
+                                                <div class="cast-next-2"><i
+                                                        class="flaticon-double-right-arrows-angles"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="casting-slider-two owl-carousel">
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast05.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">pete warren</a></h6>
+                                                    <span class="cate">actor</span>
+                                                </div>
+                                            </div>
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast06.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">howard bass</a></h6>
+                                                    <span class="cate">executive producer</span>
+                                                </div>
+                                            </div>
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast07.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">naomi smith</a></h6>
+                                                    <span class="cate">producer</span>
+                                                </div>
+                                            </div>
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="assets/images/cast/cast08.jpg" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">tom martinez</a></h6>
+                                                    <span class="cate">producer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="assets/images/cast/cast02.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">minkuk seo</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
+                                                enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
+                                                fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="assets/images/cast/cast04.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">rudra rai</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
+                                                enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
+                                                fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="assets/images/cast/cast01.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">rafuj</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
+                                                enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
+                                                fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="assets/images/cast/cast03.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">bela bose</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
+                                                enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
+                                                fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="load-more text-center">
+                                        <a href="#0" class="custom-button transparent">load more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ==========Movie-Section========== -->
+
+    <!-- ==========Newslater-Section========== -->
+    <?php
+    include('footer.php');
+    ?>
+    <!-- ==========Newslater-Section========== -->
+
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+<!-- Mirrored from pixner.net/boleto/demo/movie-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2024 11:30:29 GMT -->
+
+</html>

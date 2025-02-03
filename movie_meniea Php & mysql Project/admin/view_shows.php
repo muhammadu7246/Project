@@ -1,0 +1,245 @@
+<?php
+include('header.php');
+include('slidebar.php');
+?>
+<!-- main content -->
+<main class="main">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- main title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>Movie</h2>
+
+                    <span class="main__title-stat">? total</span>
+
+                    <div class="main__title-wrap">
+                        <!-- filter sort -->
+                        <div class="filter" id="filter__sort">
+                            <span class="filter__item-label">Sort by:</span>
+
+                            <div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-sort"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <input type="button" value="Date created">
+                                <span></span>
+                            </div>
+
+                            <ul class="filter__item-menu dropdown-menu scrollbar-dropdown"
+                                aria-labelledby="filter-sort">
+                                <li>Date created</li>
+                                <li>Rating</li>
+                                <li>Views</li>
+                            </ul>
+                        </div>
+                        <!-- end filter sort -->
+
+                        <!-- search -->
+                        <form action="#" class="main__title-form">
+                            <input type="text" placeholder="Find movie / tv series..">
+                            <button type="button">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="8.25998" cy="8.25995" r="7.48191" stroke="#2F80ED" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></circle>
+                                    <path d="M13.4637 13.8523L16.3971 16.778" stroke="#2F80ED" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </form>
+                        <!-- end search -->
+                    </div>
+                </div>
+            </div>
+            <!-- end main title -->
+
+            <!-- users -->
+            <div class="col-12">
+                <div class="main__table-wrap">
+                    <table class="main__table">
+                        <thead>
+                            <th class="col-md-1">
+                                Sl.no
+                            </th>
+                            <th class="col-md-2">
+                                Screen
+                            </th>
+                            <th class="col-md-3">
+                                Show Time
+                            </th>
+                            <th class="col-md-3">
+                                Movie
+                            </th>
+                            <th class="col-md-3">
+                                Options
+                            </th>
+                        </thead>
+
+                        <tbody>
+                            <?php include('msgbox.php'); ?>
+                            <?php
+                            include 'conn.php';
+                            $sw = mysqli_query($con, "select * from tbl_shows where st_id in(select st_id from tbl_show_time where screen_id in(select screen_id from  tbl_screens where t_id='" . $_SESSION['theatre'] . "')) and status='1'");
+                            if (mysqli_num_rows($sw)) {
+                                $sl = 1;
+                                while ($shows = mysqli_fetch_array($sw)) {
+                                    ?>
+                                    <tr>
+                                        <td>
+                                            <div class="main__table-text"> <?php echo $sl;
+                                            $sl++; ?></div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text"><a href="#">
+                                                    <?php
+                                                    $st = mysqli_query($con, "select * from tbl_show_time where st_id='" . $shows['st_id'] . "'");
+                                                    $show_time = mysqli_fetch_array($st);
+                                                    $sr = mysqli_query($con, "select * from tbl_screens where screen_id='" . $show_time['screen_id'] . "'");
+                                                    $screen = mysqli_fetch_array($sr);
+                                                    $mv = mysqli_query($con, "select * from tbl_movie where movie_id='" . $shows['movie_id'] . "'");
+                                                    $movie = mysqli_fetch_array($mv);
+                                                    ?>
+                                                    <?php echo $screen['screen_name']; ?>
+                                                </a></div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text main__table-text--rate">
+                                                <?php echo date('h:i A', strtotime($show_time['start_time'])) . " ( " . $show_time['name'] . " Show )"; ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text main__table-text--rate">
+                                                <?php echo $movie['movie_name']; ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-btns">
+                                                <?php if ($shows['r_status'] == 1) {
+                                                    ?>
+                                                    <a href="change_running.php?id=<?php echo $shows['s_id']; ?>&status=0"
+                                                        class="main__table-btn main__table-btn--view">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                            <path
+                                                                d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                                        </svg>
+                                                    </a>
+                                                    <?php
+                                                } else { ?> <a href="change_running.php?id=<?php echo $shows['s_id']; ?>&status=1"
+                                                    class="main__table-btn main__table-btn--edit">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                        <path
+                                                            d="M22,7.24a1,1,0,0,0-.29-.71L17.47,2.29A1,1,0,0,0,16.76,2a1,1,0,0,0-.71.29L13.22,5.12h0L2.29,16.05a1,1,0,0,0-.29.71V21a1,1,0,0,0,1,1H7.24A1,1,0,0,0,8,21.71L18.87,10.78h0L21.71,8a1.19,1.19,0,0,0,.22-.33,1,1,0,0,0,0-.24.7.7,0,0,0,0-.14ZM6.83,20H4V17.17l9.93-9.93,2.83,2.83ZM18.17,8.66,15.34,5.83l1.42-1.41,2.82,2.82Z" />
+                                                    </svg>
+                                                </a>
+                                                <?php
+                                                } ?>
+                                                <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"
+                                                    class="main__table-btn main__table-btn--edit">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                        <path
+                                                            d="M22,7.24a1,1,0,0,0-.29-.71L17.47,2.29A1,1,0,0,0,16.76,2a1,1,0,0,0-.71.29L13.22,5.12h0L2.29,16.05a1,1,0,0,0-.29.71V21a1,1,0,0,0,1,1H7.24A1,1,0,0,0,8,21.71L18.87,10.78h0L21.71,8a1.19,1.19,0,0,0,.22-.33,1,1,0,0,0,0-.24.7.7,0,0,0,0-.14ZM6.83,20H4V17.17l9.93-9.93,2.83,2.83ZM18.17,8.66,15.34,5.83l1.42-1.41,2.82,2.82Z" />
+                                                    </svg>
+                                                </a>                                        
+                                                <script>
+                                                    function deld(m) {
+                                                        if (confirm("Are you want to delete this movie") == true) {
+                                                            window.location = "del_movie.php?mid=" + m;
+                                                        }
+                                                    }
+                                                    // Show image
+                                                    function dels(x) {
+                                                        if (confirm("Are you want to Show this Movie Detail") == true) {
+                                                            window.location = "show_movie.php?mid=" + x;
+                                                        }
+                                                    }
+                                                    // edit image
+                                                    function dele(n) {
+                                                        if (confirm("Are you want to Edit this Movie Detail") == true) {
+                                                            window.location = "edit_movie.php?mid=" + n;
+                                                        }
+                                                    }
+                                                </script>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <?php
+                                }
+                            }
+                            ?>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end users -->
+
+            <!-- paginator -->
+            <div class="col-12">
+                <div class="paginator">
+                    <span class="paginator__pages">10 from 14 452</span>
+
+                    <ul class="paginator__paginator">
+                        <li>
+                            <a href="#">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 5.36475L13.1992 5.36475" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M5.771 10.1271L0.749878 5.36496L5.771 0.602051" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li>
+                            <a href="#">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1992 5.3645L0.75 5.3645" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M8.17822 0.602051L13.1993 5.36417L8.17822 10.1271" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end paginator -->
+        </div>
+    </div>
+</main>
+<!-- end main content -->
+
+<!-- modal status -->
+<div id="modal-status" class="zoom-anim-dialog mfp-hide modal">
+    <h6 class="modal__title">Status change</h6>
+
+    <p class="modal__text">Are you sure about immediately change status?</p>
+
+    <div class="modal__btns">
+        <button class="modal__btn modal__btn--apply" type="button">Apply</button>
+        <button class="modal__btn modal__btn--dismiss" type="button">Dismiss</button>
+    </div>
+</div>
+<!-- end modal status -->
+
+<!-- modal delete -->
+<div id="modal-delete" class="zoom-anim-dialog mfp-hide modal">
+    <h6 class="modal__title">Item delete</h6>
+
+    <p class="modal__text">Are you sure to permanently delete this item?</p>
+
+    <div class="modal__btns">
+        <button class="modal__btn modal__btn--apply" type="button">Delete</button>
+        <button class="modal__btn modal__btn--dismiss" type="button">Dismiss</button>
+    </div>
+</div>
+<!-- end modal delete -->
+
+<?php
+include('header.php');
+?>

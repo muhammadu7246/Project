@@ -1,0 +1,12 @@
+<?php
+    session_start();
+    include('conn.php');
+    extract($_POST);
+    foreach($stime as $time)
+    {
+        mysqli_query($con,"insert into  tbl_shows values(NULL,'$time','".$_SESSION['admin']."','$movie','$sdate','1','0')");
+    }
+    $_SESSION['success']="Show Added";
+    header('location:add_show.php');
+    ?>
+    

@@ -1,0 +1,524 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive header templates</title>
+    <script src="jquery.js"></script>
+    <style>
+        /* <!-- first navbar has been ready --> */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            padding: 25px;
+            z-index: 9999;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar ul>.logo {
+            display: none;
+
+        }
+
+        .navbar .logo h1 {
+            font-size: 30px;
+            height: 25px;
+            vertical-align: middle;
+
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+        }
+
+        .navbar ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            font-family: sans-serif;
+            position: relative;
+            padding: 8px 0;
+            color: black;
+            font-size: 14px;
+            font-weight: 900px;
+            text-transform: capitalize;
+            transition: all 0.3s linear;
+        }
+
+        .navbar ul li a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: auto;
+            width: 0;
+            height: 3px;
+            background-color: grey;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: grey;
+        }
+
+        .navbar ul li a:hover:after,
+        .navbar ul li a.active::after {
+            width: 100%;
+            right: auto;
+            left: 0%;
+        }
+
+        .burger {
+            display: none;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .burger span {
+            border-radius: 20%;
+            display: block;
+            width: 100%;
+            height: 3px;
+            display: inline-block;
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            left: 0;
+            top: calc(50% - 1.5px);
+            transition: all 0.2s;
+        }
+
+        .burger span:first-child {
+            transform: translateX(300%);
+            transform-origin: right top;
+        }
+
+        .burger span:last-child {
+            transform: translateY(300%);
+            transform-origin: right bottom;
+        }
+
+        .burger.active span:first-child {
+            transform: rotate(45deg) scaleX(0.5) translateX(4px);
+        }
+
+        .burgerq.active span:last-child {
+            transform: rotate(-45deg) scaleX(0.5) translateX(4px);
+        }
+
+        @media (max-width: 900px) {
+            .burger {
+                display: block;
+            }
+
+            header {
+                padding: 10px;
+            }
+
+            .navbar ul li {
+                line-height: 50px;
+                padding-left: 10%;
+                height: 50px;
+            }
+
+            .navbar ul {
+                border-radius: 1%;
+                display: block;
+                flex-direction: column;
+                width: 320px;
+                height: 600px;
+                position: fixed;
+                top: 55px;
+                right: 0;
+                padding: 40px 0;
+                display: flex;
+                align-items: flex-start;
+                transform: translateX(100%);
+                transition: all 0.3s;
+                background-color: grey;
+                color: aliceblue;
+            }
+
+            .navbar ul li a {
+                font-size: large;
+            }
+
+            .navbar ul li {
+                margin-bottom: 5%
+            }
+
+            .navbar ul:hover {}
+
+            .navbar ul li:hover {
+                border-radius: 1%;
+                width: 100%;
+                height: 50px;
+                background-color: rgb(248, 246, 246);
+            }
+
+            .navbar ul li a:hover {
+                color: grey;
+            }
+
+            .navbar ul.active {
+                transform: translateX(0);
+            }
+
+            .navbar ul .logo {
+                margin-left: 15%;
+                margin-bottom: 10%;
+                display: block;
+            }
+        }
+
+        .img {
+            width: 100%;
+            height: 650px;
+            background-image: url(image01/123.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* <!-- first navbar has been ready --> */
+        /* <!-- Second navbar has been ready --> */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            padding: 25px;
+            z-index: 9999;
+        }
+
+        .container1 {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .navbar1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar1 ul>.logo1 {
+            display: none;
+
+        }
+
+        .navbar1 .logo1 {
+            font-size: 30px;
+            height: 25px;
+            vertical-align: middle;
+
+        }
+
+        .navbar1 a {
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+        }
+
+        .navbar1 ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar1 ul li {
+            margin: 0 20px;
+            list-style: none;
+        }
+
+        .navbar1 ul li a {
+            font-family: sans-serif;
+            position: relative;
+            padding: 8px 0;
+            color: black;
+            font-size: 14px;
+            font-weight: 900px;
+            text-transform: capitalize;
+            transition: all 0.3s linear;
+        }
+
+        .navbar1 ul li a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: auto;
+            width: 0;
+            height: 3px;
+            background-color: grey;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        }
+
+        .navbar1 ul li a:hover,
+        .navbar ul li a.active {
+            color: grey;
+        }
+
+        .navbar1 ul li a:hover:after,
+        .navbar1 ul li a.active::after {
+            width: 100%;
+            right: auto;
+            left: 0%;
+        }
+
+        .burger1 {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .burger1 span {
+            border-radius: 20%;
+            display: block;
+            width: 100%;
+            height: 3px;
+            display: inline-block;
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            left: 0;
+            top: calc(50% - 1.5px);
+            transition: all 0.2s;
+        }
+
+        .burger1 span:first-child {
+            transform: translateY(300%);
+            transform-origin: top bottom;
+        }
+
+        .burger1 span:last-child {
+            transform: translateY(300%);
+            transform-origin: bottom top;
+        }
+
+        .burger1.active span:first-child {
+            transform: rotate(45deg) scaleX(1) translateX(1px);
+        }
+
+        .burger1.active span {
+            transform: rotate(45deg) scaleX(1) translateX(1px);
+        }
+
+        .burger1.active span:last-child {
+            transform: rotate(-45deg) scaleX(1) translateX(1px);
+        }
+
+        .burger1 {
+            display: block;
+        }
+
+        .navbar1 ul li {
+            line-height: 50px;
+            padding-left: 10%;
+            height: 50px;
+        }
+
+        .navbar1 ul {
+            margin-top: 5%;
+            border-radius: 1%;
+            display: block;
+            flex-direction: column;
+            width: 100%;
+            height: 500px;
+            position: fixed;
+            top: 55px;
+            right: 0;
+            padding: 10px 40%;
+            display: flex;
+            align-items: flex-start;
+            transform: translateX(100%);
+            transition: all 0.3s;
+            background-color: grey;
+            color: aliceblue;
+        }
+
+        .navbar1 ul li a {
+            font-size: large;
+        }
+
+        .navbar1 ul li:hover {
+            background-color: aliceblue;
+            border-radius: 1%;
+            width: 100%;
+            height: 50px;
+        }
+
+        .navbar1 ul li a:hover {
+            color: grey;
+        }
+
+        .navbar1 ul.active {
+            transform: translateX(0);
+        }
+
+        .navbar1 ul .logo {
+            margin-left: 15%;
+            margin-bottom: 10%;
+            display: block;
+        }
+
+        .burger10 {
+            visibility: hidden;
+        }
+
+        .img1 {
+            width: 100%;
+            height: 650px;
+            background-image: url(image01/123.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-weidth: 900) {
+            .navbar1{
+                margin-top: 40%;
+            }
+        }
+
+        /* <!-- Second navbar has been ready --> */
+    </style>
+</head>
+<!-- first navbar has been ready -->
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <h1>Compney Name</h1>
+                </a>
+                <ul>
+                    <a href="#" class="logo">Compney Name</a>
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">New</a></li>
+                    <li><a href="#" class="nav-link">Descovred</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contect Us</a></li>
+                </ul>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="img">
+    </section>
+    <script>
+        $(document).ready(function () {
+            $(".nav-link").on("click", function () {
+                $(".nav-link").removeClass("active");
+                $("this").addClass("active");
+            });
+        });
+        $(".burger").on("click", function () {
+            $(this).toggleClass("active")
+            $(".navbar ul").toggleClass("active")
+        });
+    </script>
+    <!-- first navbar has been ready -->
+    <!-- Second navbar has been ready -->
+
+
+    <header>
+        <div class="container1">
+            <div class="navbar1">
+                <div class="burger1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <a href="#" class="logo">Compney Name</a>
+                    <li><a href="#" class="nav-link1">Home</a></li>
+                    <li><a href="#" class="nav-link1">New</a></li>
+                    <li><a href="#" class="nav-link1">Descovred</a></li>
+                    <li><a href="#" class="nav-link1">About</a></li>
+                    <li><a href="#" class="nav-link1">Contect Us</a></li>
+                </ul>
+                <a href="#" class="logo1">
+                    Compney Name
+                </a>
+                <div class="burger10">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="img1">
+    </section>
+    <script>
+        $(document).ready(function () {
+            $(".nav-link1").on("click", function () {
+                $(".nav-link1").removeClass("active");
+                $("this").addClass("active");
+            });
+        });
+        $(".burger1").on("click", function () {
+            $(this).toggleClass("active")
+            $(".navbar1 ul").toggleClass("active")
+        });
+    </script> -->
+</body>
+
+</html>
+
+/* <!-- Second navbar has been ready --> */

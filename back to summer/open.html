@@ -1,0 +1,291 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open page | back to summer.com</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="Backtosummer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- /* nacbar's HTML has been started */ -->
+    <header>
+        <div class="navbar">
+            <div class="logo-warp">
+                <div class="logo"><a href="backtosummer.html">
+                        <H1><b>BackTo <span>Summer</span></b></H1>
+                    </a></div>
+            </div>
+            <ul class="main">
+                <li><a href="backtosummer.html">Home <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="collection.html">Collection <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="order.html">Order <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="about.html">About <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="services.html">Services <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="contect us.html">Contect Us <i class='bx bx-chevrons-down'></i></a></li>
+            </ul>
+            <div class="social-link">
+                <a href="#" class="social-link"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-tiktok'></i></a>
+
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                // Navbar Scrollin efect
+                $(window).on("scroll", function () {
+                    if ($(this).scrollTop() > 80) {
+                        $("header").addClass("sticky");
+                        $("header .logo a h1 b").css("color", "white");
+                        $("header .social-link i").css("color", "white");
+                        $(".burger span").css("background-color", "white");
+                    }
+                    else {
+                        $("header").removeClass("sticky");
+                        $("header .logo a h1 b").css("color", "BLACK");
+                        $("header .social-link i").css("color", "BLACK");
+                        $(".burger span").css("bavkground-color", "BLACK");
+                    }
+                });
+                // toogle Efect on navbar
+                $(".burger").on("click", function () {
+                    $(this).toggleClass("active")
+                    $(".main").toggleClass("active")
+                });
+            });
+        </script>
+    </header>
+    <!-- /* nacbar's HTML has been started */ -->
+    <div class="first-cover">
+        <div class="cover">
+            <div class="heading">
+                <h6>New, Tips,Trands & CelebretyStyle</h6>
+                <h1>Mens <span>summer Collection</span></h1>
+                <h3>Style & Fashion</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed id voluptates accusantium aperiam ad
+                    ducimus
+                    velit commodi iste doloremque sapiente autem, tenetur, porro ullam accusamus, voluptatem inventore
+                    blanditiis itaque. Quas!</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+
+ <!-- featured hase been started  -->
+
+ <section class="featured" id="featured">
+    <div class="row" style="margin-top: 10%;">
+        <div class="image-contanirer">
+            <div class="small-image">
+                <img src="backimg/" alt="" class="featured-image01">
+                <img src="backimg/j..webp" alt="" class="featured-image01">
+                <img src="backimg/j.1.jpeg" alt="" class="featured-image01">
+                <img src="backimg/j.2.webp" alt="" class="featured-image01">
+            </div>
+            <div class="large-image">
+                <img src="backimg/j.9.webp" alt="" class="large-image05">
+
+            </div>
+        </div>
+        <div class="content">
+            <h3>New Nike airmac Shose</h3>
+            <div class="start">
+                <i class='bx bxs-star' style="color: orangered;"></i>
+                <i class='bx bxs-star' style="color: orangered;"></i>
+                <i class='bx bxs-star' style="color: orangered;"></i>
+                <i class='bx bxs-star' style="color: orangered;"></i>
+                <i class='bx bxs-star' style="color: orangered;"></i>
+
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati consequatur, nam omnis non
+                autem
+                nulla itaque aut voluptatem quod corporis.</p>
+            <div class="prize">$90 <span>120$</span></div>
+        
+            <div class="button"><a href="contect us.html" class="btn01">Add to Card</a></div>
+        </div>
+    </div>
+
+
+    </div>
+</section>
+<!-- featured hase been ended  -->
+
+    
+    <div class="hot-prodects">
+        <h1>
+            <center style="color: aliceblue; margin: 0 0 50px 0;">Top hot Summer Collection</center>
+        </h1>
+
+        <div class="container10">
+            <div class="dublle">
+                <div class="box-101">
+                    <img src="backimg/j.3.webp" alt="">
+                    <div class="conetct">
+                        <h3>Brand : Junaid Jamshid</h3>
+                        <h1 style="color: antiquewhite;">Only for child</h1>
+                        <p style="color: antiquewhite;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>.</p>
+                    </div>
+                   
+
+                </div>
+                <div class="box-101">
+                    <img src="backimg/j.jpg" alt="">
+                    <div class="conetct">
+                        <h3>Brand : Junaid Jamshid</h3>
+                        <h1 style="color: antiquewhite;">Lone</h1>
+                        <p style="color: antiquewhite;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="dublle">
+                <div class="box-101">
+                    <img src="backimg/j.2.webp" alt="">
+                    <div class="conetct">
+                        <h3>Brand : Junaid Jamshid</h3>
+                        <h1 style="color: antiquewhite;">Only for Mens</h1>
+                        <p style="color: antiquewhite;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    </div>
+                    
+
+                </div>
+
+                <div class="box-101">
+                    <img src="backimg/j6.jpg" alt="">
+                    <div class="conetct">
+                        <h3>Brand : Junaid Jamshid</h3>
+                        <h1 style="color: antiquewhite;">Lone</h1>
+                        <p style="color: antiquewhite;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+                <div class="second-cover hidden">
+                    <div class="contect-slider1">
+                    </div>
+                    <!-- /* Footer's HTML has been started */ -->
+
+                    <footer>
+                        <div class="container01">
+                            <br><br><br><br>
+                            <footer>
+                                <div class="navbar1">
+                                    <div class="logo-warp1">
+                                        <div class="logo1"><a href="backtosummer.html">
+                                                <H1><b style="color: white;">BackTo <span>Summer</span></b></H1>
+                                            </a></div>
+                                    </div>
+                                    <ul class="main1">
+                                        <li><a href="backtosummer.html">Home <i class='bx bx-chevrons-down'></i></a>
+                                        </li>
+                                        <li><a href="collection.html">Collection <i class='bx bx-chevrons-down'></i></a>
+                                        </li>
+                                        <li><a href="order.html">Order <i class='bx bx-chevrons-down'></i></a></li>
+                                        <li><a href="about.html">About <i class='bx bx-chevrons-down'></i></a></li>
+                                        <li><a href="services.html">Services <i class='bx bx-chevrons-down'></i></a>
+                                        </li>
+                                        <li><a href="contect us.html">Contect Us <i class='bx bx-chevrons-down'></i></a>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                            </footer>
+                            <div class="footer">
+                                <div class="col">
+                                    <h1>Catalog</h1>
+                                    <div class="list">
+                                        <ul>
+                                            <li><a href="#">Coutes</a></li>
+                                            <li><a href="#">T-shirt</a></li>
+                                            <li><a href="#">Shirt</a></li>
+                                            <li><a href="#">Shose</a></li>
+                                            <li><a href="#">Other Use full Things</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="Col">
+                                    <h1>Phone</h1>
+                                    <div class="list">
+                                        <ul>
+                                            <li><a href="#">(00)000-0000000</a></li>
+                                            <li><a href="#">(00)000-0000000</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h1>Contect</h1>
+                                    <div class="list">
+                                        <ul>
+                                            <li><a href="#">Backtosummer@gmail.com</a></li>
+                                            <li><a href="#">Karachi, Pakistan.</a></li>
+                                            <li><a href="#">Time : 24 / 7</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h1>Instagram</h1>
+                                    <div class="list asd">
+                                        <img src="image/download.jpg" width="10%">
+                                        <img src="image/suit-869380_1280-1.jpg" alt="">
+                                        <img src="image/prada-bag-splurge-1-3478d98631724ad998fb628a5c4db521.jpg"
+                                            width="10%" alt="">
+                                        <img src="image/images.jpg" width="10%" alt="">
+                                    </div>
+                                    <div class="list">
+                                        <h3>Follow on Instagram & facebook</h3>
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <h1>News Latter</h1>
+                                    <div class="list">
+                                        <input type="text" placeholder="Enter your Nmae :"><br>
+                                        <input type="password" placeholder="Enter your Password :"><br>
+                                        <button type="submit">Sumit</button>
+                                        <br><br>
+                                        <hr>
+                                        <div class="icon">
+                                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                                            <a href="#"><i class='bx bxl-tiktok'></i></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <center>
+                                    <div class="copy">
+                                        <p><span>BackTo Summer</span> <a href="#"><i class='bx bx-copyright'></i></a>
+                                            2023 | All rights
+                                            Reserved</p>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- /* Footer's HTML has been ended */ -->
+
+</body>
+
+</html>

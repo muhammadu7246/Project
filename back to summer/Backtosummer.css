@@ -1,0 +1,1387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #01051a;
+    color: white;
+}
+
+/* nacbar's css has been started */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.main {
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+header.sticky::before {
+    color: aliceblue;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    border-bottom-left-radius: 125px;
+    border-top-right-radius: 125px;
+
+}
+
+header.sticky .navbar .logo-werp {
+    padding: 10px 0;
+}
+
+header.sticky .navbar .logo-werp .logo {
+    height: 35px;
+}
+
+header.sticky::before h1 b {
+    color: aliceblue;
+}
+
+.navbar {
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo-werp {
+    padding: 40px 0;
+    transition: all 0.3s;
+
+}
+
+.navbar .logo-werp .logo {
+    display: block;
+    width: 130px;
+    height: 60px;
+    transition: all 0.3s;
+}
+
+.navbar .main {
+    display: flex;
+}
+
+.navbar .main li {
+    list-style: none;
+}
+
+.navbar .main li a {
+    display: inline-block;
+    color: black;
+    padding: 20px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.navbar .main li a:hover {
+    color: brown;
+
+}
+
+.navbar .logo h1 b {
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 900;
+}
+
+.navbar .logo-warp .logo h1 b span {
+    color: rgb(150, 49, 49);
+}
+
+.social-link .social-link i {
+    color: rgb(255, 255, 255);
+    margin-right: 15px;
+
+}
+
+.social-link .social-link i:hover {
+    color: brown;
+
+}
+
+.burger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger span {
+    border-radius: 20%;
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    top: calc(50% - 1.5px);
+    transition: all 0.2s;
+}
+
+.burger span:first-child {
+    transform: translateX(300%);
+    transform-origin: top bottom;
+}
+
+.burger span:last-child {
+    transform: translateY(300%);
+    transform-origin: bottom top;
+}
+
+.burger.active span:first-child {
+    transform: rotate(45deg) scaleX(1) translateX(1px);
+}
+
+.burger.active span {
+    transform: rotate(45deg) scaleX(1) translateX(1px);
+}
+
+.burger.active span:last-child {
+    transform: rotate(-45deg) scaleX(1) translateX(1px);
+}
+
+@media (max-width: 1050px) {
+    .burger {
+        display: block;
+    }
+
+    .navbar ul {
+        padding-left: 10%;
+    }
+
+    .main1 li {
+        display: none;
+    }
+
+    .navbar ul {
+        display: none;
+        border-radius: 1%;
+        flex-direction: column;
+        width: 320px;
+        height: 600px;
+        position: fixed;
+        top: 55px;
+        right: 0;
+        padding: 40px 0;
+        display: flex;
+        align-items: flex-start;
+        transform: translateX(100%);
+        transition: all 0.3s;
+        background-color: grey;
+        color: aliceblue;
+    }
+
+    .navbar ul li a {
+        font-size: large;
+    }
+
+    .navbar ul li {
+        margin-bottom: 5%
+    }
+
+
+    .navbar ul li:hover {
+        border-radius: 1%;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(248, 246, 246);
+    }
+
+    .navbar ul li a:hover {
+        color: grey;
+    }
+
+    li a i {
+        margin-left: 1%;
+    }
+
+    .navbar ul.active {
+        transform: translateX(0);
+    }
+
+    .navbar ul .logo {
+        margin-left: 15%;
+        margin-bottom: 10%;
+        display: block;
+    }
+
+    .main1 {
+        display: none;
+    }
+
+    .logo {
+        padding: 30px;
+    }
+    .contect-slider .heading{
+        align-items: center;
+        justify-content: center;
+    }
+    .contect-slider .heading h6{
+        margin-top: 8%;
+    }
+    .sudscribe, .sudscribe12{
+        margin-bottom: 10%;
+    }
+    .perent {
+        margin-bottom: 160%;        
+    }
+    .cover .heading {
+        padding: 80% 0 0 10%;
+    }
+    .perent{
+        padding: 0 30px;
+    }
+    .dis h1{
+       display: none;
+    }
+    .zxc{
+        display: block;
+    }
+    .hot-prodects{
+        width: 90%;
+        margin: 0 20px;
+    }
+.buy{
+    width: 50%;
+}
+}
+
+/* navbar's css has been ended */
+/* Slider's Css Sterted */
+.cover {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    transition: all 0.3s;
+
+
+    animation-name: animate;
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.cover .heading {
+    width: 50%;
+    height: auto;
+    padding: 20% 0 0 3%;
+}
+
+.cover .heading h6 {
+    color: aliceblue;
+    font-size: 25px;
+    margin-bottom: 1%;
+
+}
+
+.cover .heading h1 {
+    color: aliceblue;
+    font-size: 50px;
+    margin-bottom: 1%;
+
+}
+
+.cover .heading h1 span {
+    color: rgb(229, 143, 30);
+    font-size: 50px;
+    margin-bottom: 1%;
+
+}
+
+.cover .heading h3 {
+    color: aliceblue;
+    font-size: 25px;
+    margin-bottom: 1%;
+
+}
+
+.cover .heading p {
+    color: aliceblue;
+    font-size: 18px;
+    margin-bottom: 1%;
+
+}
+
+.cover .heading button {
+    color: aliceblue;
+    padding: 10px 30px;
+    margin-top: 4%;
+    background: transparent;
+}
+
+.cover .heading button:hover {
+    text-transform: uppercase;
+    background-color: rgb(229, 143, 30);
+
+}
+
+@keyframes animate {
+    0% {
+        background-image: url(backimg/pexels-terje-sollie-298863.jpg);
+    }
+
+    50% {
+        background-image: url(backimg/pexels-hasib-khorami-1496647.jpg);
+    }
+
+    100% {
+        background-image: url(backimg/photo-1543322748-33df6d3db806.jpeg);
+    }
+}
+
+
+/* Slider's Css Ended */
+
+
+
+
+
+
+
+
+/* Prodect's Css Sterted */
+h4 {
+    margin: 2% 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+h4 b {
+    color: white;
+}
+
+h4 b span {
+    color: burlywood;
+}
+
+.perent {
+    width: 100%;
+    height: 100%;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box {
+    margin-bottom: 1%;
+    width: 500px;
+    height: 500px;
+}
+
+.box img {
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.box img:hover{
+    filter: grayscale(0%) contrast(100%) saturate(100%);
+    
+}
+
+.box button {
+    display: none;
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.box01 {
+    margin-bottom: 0;
+    width: 250px;
+    height: 250px;
+}
+
+/* Prodect's Css ended */
+/* brand's name */
+.compuney {
+    position: relative;
+}
+
+.brand {
+    padding: 10px 40px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.branded {
+    margin-top: 1%;
+    width:100px;
+    height: 100px;
+}
+.branded img{
+    border-radius: 500px;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+}
+.branded h1 i {
+    color: rgb(229, 143, 30);
+}
+.qwe h1 span {
+    color: rgb(255, 255, 255);
+}
+.qwe{
+    margin-top: 1%;
+    width:200px;
+    height: 300px;
+}
+.qwe h3 {
+    margin: 10px 0;
+    color: #ffffff;
+
+}
+
+.qwe p {
+    color: #ffffffb1;
+    font-size: 12px;
+
+}
+
+.buy {
+    padding-top: 20px;
+    width: 100px;
+    background-color: rgb(179, 47, 47);
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 200;
+    display: block;
+    border-top-left-radius: 125px;
+}
+
+.buy1 {
+    border-bottom-left-radius: 125px;
+    width: 110px;
+    background-color: #db927a;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 200;
+    display: block;
+
+}
+
+.buy {
+    text-align: center;
+    width: 10%;
+    position: fixed;
+    top: 200;
+    right: 0;
+    z-index: 999;
+}
+
+.buy::before {
+    content: "";
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 250;
+    transition: background-color 0.3s;
+}
+
+.buy1 {
+    text-align: center;
+    margin-top: 4px;
+    width: 10%;
+    position: fixed;
+    top: 250;
+    right: 0;
+    z-index: 999;
+}
+
+.buy1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+.contect-slider {
+    background-image: url(backimg/pexels-hasib-khorami-1496647.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+    filter: grayscale(80%);
+}
+.contect-slider1 {
+    background-color:  #000314;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+.contect {
+    width: 100%;
+    height: auto;
+    background-color: #000000ec;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.con {
+    cursor: pointer;
+    margin-top: 1%;
+    width: 300px;
+    height: 10vh;
+}
+
+.contect-slider .heading {
+    width: 90%;
+}
+
+.contect-slider .heading h6 {
+    color: #ffffff;
+    margin-bottom: 1%;
+}
+
+.contect-slider .heading h1 {
+    color: white;
+
+}
+
+.contect-slider .heading h1 span {
+    color: rgb(229, 143, 30);
+
+}
+
+.contect-slider .heading p{
+    color: #ffffff;
+    width: 40%;
+}
+.contect-slider .heading button {
+    color: aliceblue;
+    padding: 10px 30px;
+    margin-top: 4%;
+    background: transparent;
+}
+
+.contect-slider  .heading button:hover {
+    text-transform: uppercase;
+    background-color: rgb(229, 143, 30);
+
+}
+.con h1 {
+    font-size: 23px;
+    font-weight: 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    line-height: 10vh;
+}
+
+.con h1 i {
+    color: rgb(210, 24, 24);
+    margin-right: 2%;
+
+}
+
+.sudscribe {
+    background-image: url(backimg/Giorgio\ Armani.png);
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    padding-top: 6%;
+}
+.sudscribe12 {
+    background-image: url(backimg/pexels-terje-sollie-298863.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    padding-top: 6%;
+}
+
+.sudscribe h1 {
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sudscribe input {
+    background-color: transparent;
+    font-size: 16px;
+    padding: 8px 70px;
+    text-align: center;
+    position: relative;
+}
+
+.sudscribe button {
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 2%;
+    padding: 10px 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* brand's name */
+/* card slider1 */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box-10{
+    width: 40%;
+    background-color: antiquewhite;
+    position: relative;
+}
+.box-10 img{
+    width: 100%;
+    height: 40vh;
+}
+.box-10 .conetct{
+    margin-bottom: 1%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #020202a2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+.box-10:hover .conetct{
+    top: 100;
+}
+.conetct{
+    border: 2px solid whea;
+}
+
+/* for the collection peposive */
+.container10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container10 .dublle{
+    width: 400px;
+    height: 20%;
+    position: relative;
+    background-color: #929ddc45;
+
+}
+.box-101{
+    width: 100%;
+    background-color: antiquewhite;
+    position: relative;
+}
+.box-101 img{
+    width: 100%;
+    height: 40vh;
+}
+.box-101 .conetct{
+    padding: 20px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #020202a2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+.box-101:hover .conetct{
+    top: 100;
+}
+.conetct{
+}
+.num{
+    display: flex;
+    width: 100px;
+}
+.num1{
+    width: 30%;
+    height: 30%;
+    background-color: #ffffff;
+    color: #020202;
+}
+.hidden{
+    overflow: hidden;
+}
+/* for the collection peposive */
+/* card slider1 */
+
+/* other proprerties is that */
+.slide {
+    position: relative;
+}
+
+.img {
+    justify-content: center;
+    padding: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.img1 {
+    width: 550px;
+    height: 40vh;
+}
+
+.img2 {
+    margin-top: 3%;
+    width: 550px;
+    height: 40vh;
+}
+
+
+
+.guide {
+    justify-content: space-evenly;
+    padding: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.guide1 {
+    width: 550px;
+    height: 70vh;
+    background-color: rgb(187, 213, 236);
+}
+
+.guide2 {
+    width: 550px;
+    height: 70vh;
+    background-color: rgb(187, 213, 236);
+}
+
+.guide1,
+.guide2,
+.guide3 h4 {
+    margin-top: 1%;
+    padding: 20px 60px;
+    text-align: center;
+
+}
+.guide1 img{
+    border-radius: 500px;
+
+}
+
+
+.guide3 {
+    padding: 20px 30px;
+    margin-top: 2%;
+    width: 550px;
+    height: 400vh;
+    background-color: rgb(187, 213, 236);
+}
+.cont{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+}
+.div{
+    padding: 20px;
+    width: 40%;
+    background-color: #bebab9;
+    height: auto;
+}
+.div h4{
+    font-size: 15px;
+    margin-top: 30%;
+}
+.div h2{
+    font-size: 20px;
+}
+.conetct h3{
+    color: #ffffff;
+}
+/* other proprerties is that */
+/* <!-- Footer's CSS has been started --> */
+footer {
+    width: 100%;
+    bottom: 0;
+    top: 1000;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    border-top-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+
+
+}
+
+.footer {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer h1 {
+    color: aliceblue;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.list li {
+    list-style: none;
+    margin-top: 2%;
+}
+
+.list a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.list input {
+    color: aliceblue;
+    padding: 1px 50px;
+    background-color: transparent;
+    border-bottom-right-radius: 125px;
+    border-top-left-radius: 125px;
+    margin-bottom: 2%;
+
+}
+
+.list {
+    margin-bottom: 10%;
+}
+
+.asd {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.list h3 {
+    background-color: #929ddc45;
+    padding: 10%;
+    color: antiquewhite;
+}
+
+.asd img {
+    display: fixed;
+    width: 20%;
+    height: 60%;
+}
+
+.asd img:hover {
+    width: 22%;
+    height: 62%;
+
+}
+
+.list button {
+    color: aliceblue;
+    padding: 1px 50px;
+    background-color: transparent;
+    border-bottom-right-radius: 125px;
+    border-top-left-radius: 125px;
+    margin-bottom: 2%;
+}
+
+.list button:hover {
+    background: linear-gradient(to right, #929ddc, #020202);
+    color: white;
+
+}
+
+.icon a i {
+    color: white;
+    font-size: 20px;
+    border: 1px solid wheat;
+    border-radius: 50px;
+    padding: 3%;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+.icon a i:hover {
+    color: brown;
+    text-shadow: 10px 10px 10px 10px color(#020202);
+
+}
+
+.copy {
+    width: 100%;
+    height: 6vh;
+    margin: 1%;
+}
+
+.copy p span,
+i {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    color: white;
+
+}
+
+.copy p {
+    font-weight: 100;
+    color: white;
+
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.main {
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: aliceblue;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+header.sticky::before {
+    color: aliceblue;
+    background-color: black;
+
+}
+
+header.sticky .navbar .logo-werp {
+    padding: 10px 0;
+}
+
+header.sticky .navbar .logo-werp .logo {
+    height: 35px;
+}
+
+header.sticky::before h1 b {
+    color: aliceblue;
+}
+
+.navbar1 {
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar1 .logo-werp1 {
+    padding: 40px 0;
+    transition: all 0.3s;
+
+}
+
+.navbar1 .logo-werp1 .logo1 {
+    display: block;
+    width: 130px;
+    height: 60px;
+    transition: all 0.3s;
+}
+
+.navbar1 .main1 {
+    display: flex;
+}
+
+.navbar1 .main1 li {
+    list-style: none;
+}
+
+.navbar1 .main1 li a {
+    display: inline-block;
+    color: rgb(252, 250, 250);
+    padding: 20px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.navbar1 .main1 li a:hover {
+    color: brown;
+
+}
+
+.navbar1 .logo1 h1 b {
+    font-size: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 900;
+}
+
+.navbar1 .logo-warp1 .logo1 h1 b span {
+    color: brown;
+}
+
+.social-link1 .social-link1 i {
+    color: rgb(255, 255, 255);
+    margin-right: 15px;
+
+}
+
+.social-link1 .social-link1 i:hover {
+    color: brown;
+
+}
+
+/* <!-- Footer's CSS has been ended --> */
+ 
+
+
+
+
+
+/* contect page's css has been start */
+
+.con-slider{
+    width: 100%;
+    height: 500px;
+}
+.con-slider img{
+    width: 100%;
+    height: 400px;
+}
+.contect-area{
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.input{
+    background-color: #00000039;
+    width: 600px;
+    padding: 0 30px;
+}
+
+.input h1 b{
+    margin: 50px 0;
+    color: #ffffff;
+}
+.input input{
+    margin-bottom: 2%;
+}
+.input p{
+    color: #ffffff;
+}
+.map{
+    margin: 2% 2%;
+    width: 96%;
+    height: 300px;
+    padding: 0 30px;
+}
+/* contect page's css has been ende */
+/* Our Services page's css has been ende */
+.slide center h1{
+    margin: 100px 0 50px 0;
+    color: #ffffff;
+}
+.slide center p{
+    margin: 50px 0 50px 0;
+    width: 80%;
+    color: #ffffff;
+}
+/* Our services page's css has been ende */
+/* Order page's css has been ende */
+.order-container{
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.fliter {
+    width: 400px;
+}
+.order-prodect{
+    width: 900px;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ord-box{
+    width: 200px;
+    height: 40%;
+    background-color: #1936da;
+}
+.ord-contect h1{
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 23PX;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ord-contect p{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-size: 13PX;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fliter{
+    
+}
+.fliter{
+    line-height: 30px;
+}
+.cata{
+    padding: 10px 40px;
+    width: 100%;
+    height: 200px;
+    background-color: #000314a0;
+    color: white;
+    margin-bottom: 10%;
+}
+.cata button{
+    padding: 6px 10px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cata ul li a{
+    color: white;
+}
+.cata h1 center{
+    color: white;
+}
+.cata ul li{
+    list-style: symbols(start);
+    color: white;
+    margin-left: 10%;
+}
+.colur{
+    background-color: #000314a0;
+    display: flex;
+    align-items: center;
+}
+.fliter h1{
+    color: white;
+    margin-bottom: 5%;
+}
+.col1{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 5%;
+}
+
+/* Order page's css has been ende */
+
+/* <!-- featured hase been started  --> */
+.featured .row {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: .1rem solid rgba(245, 243, 243, 0.674);
+    border-radius: 2rem;
+    background-color: rgba(245, 243, 243, 0.674);
+    padding: 2rem;
+    align-items: center;
+}
+
+.content {
+    flex: 1 1 40rem;
+}
+
+.image-contanirer {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex: 1 1 50rem;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.small-image {
+    width: 20%;
+}
+
+.large-large {
+    width: 100%;
+}
+
+.small-image img {
+    width: 100%;
+}
+
+.large-image img {
+    width: 50%;
+    transform: scale(1.05);
+}
+
+.large-image img:hover {
+    width: 50%;
+    transform: scale(1.1);
+}
+
+.content h3 {
+    font-size: 30px;
+    text-style: bold;
+
+}
+
+.content p {
+    margin-top: 2%;
+    font-size: 13px;
+    text-style: bold;
+    text-style: italic;
+}
+
+.prize {
+    margin-top: 2%;
+    font-size: 22px;
+    text-style: bold;
+}
+
+.button {
+    text-align: center;
+    margin-top: 5%;
+    cursor: pointer;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: transparent;
+    border: .2rem solid rgb(212, 182, 144);
+    border-radius: 10%;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+/* <!-- featured hase been ended  --> */
+
+
+/* about */
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.par{
+    width: 500px;
+    height: auto;
+}
+.par img{
+    width: 100%;
+    height: auto;
+}
+.dis h1{
+    position: absolute;
+    top: 460px;
+    left: 20%;
+    color: white;
+    font-size: 10vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .par p{
+    padding: 10px ;
+    color: white;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .zxc{
+    display: none;
+  }

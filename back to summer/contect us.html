@@ -1,0 +1,236 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contect Us | back to summer.com</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="Backtosummer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body style="background-color: #01051a;">
+    <!-- /* nacbar's HTML has been started */ -->
+    <header>
+        <div class="navbar">
+            <div class="logo-warp">
+                <div class="logo"><a href="backtosummer.html">
+                        <H1><b>BackTo <span>Summer</span></b></H1>
+                    </a></div>
+            </div>
+            <ul class="main">
+                <li><a href="backtosummer.html">Home <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="collection.html">Collection <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="order.html">Order <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="about.html">About <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="services.html">Services <i class='bx bx-chevrons-down'></i></a></li>
+                <li><a href="contect us.html">Contect Us <i class='bx bx-chevrons-down'></i></a></li>
+            </ul>
+            <div class="social-link">
+                <a href="#" class="social-link"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-tiktok'></i></a>
+
+            </div>
+            <div class="burger">
+                <span></span>#01051a
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                // Navbar Scrollin efect
+                $(window).on("scroll", function () {
+                    if ($(this).scrollTop() > 80) {
+                        $("header").addClass("sticky");
+                        $("header .logo a h1 b").css("color", "white");
+                        $("header .social-link i").css("color", "white");
+                        $(".burger span").css("background-color", "white");
+                    }
+                    else {
+                        $("header").removeClass("sticky");
+                        $("header .logo a h1 b").css("color", "BLACK");
+                        $("header .social-link i").css("color", "BLACK");
+                        $(".burger span").css("bavkground-color", "BLACK");
+                    }
+                });
+                // toogle Efect on navbar
+                $(".burger").on("click", function () {
+                    $(this).toggleClass("active")
+                    $(".main").toggleClass("active")
+                });
+            });
+        </script>
+    </header>
+    <!-- /* nacbar's HTML has been started */ -->
+    <div class="con-slider">
+        <img src="backimg/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg" alt="">
+        <center><h1 style="color: white; margin: 20px 0;">Contect us</h1></center>
+
+    </div>
+    <div class="contect-area">
+        <div class="input">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="heading10">
+                            <h1><b>Keep in touch with us</b></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text " placeholder="Name :" class="form-control" required>
+                                <input type="email " placeholder="Email :" class="form-control" required>
+                                <input type="text " placeholder="Artical Name :" class="form-control" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="datetime-local" placeholder=" Date :" class="form-control " id="margintop"
+                                    required>
+                                <input type="number" placeholder="Whatsapp Number :" class="form-control" required>
+                                <input type="number " value="01" placeholder="Quintity :" class="form-control" required>
+        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea cols="80" rows="10" class="form-control" placeholder="Type Your Massage Here:"
+                            required></textarea>
+                    </div>
+                    <div class="form-group ">
+
+                        <button type="submit" class="form-control btn btn-info">Submit</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="input">
+            <div class="heading">
+                <h1><b>Contect Details</b></h1>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ratione quis officia perspiciatis
+                illum voluptates, ad adipisci provident est sed molestias at aliquam? Possimus eligendi laboriosam,
+                aspernatur nihil quod nisi?</p>
+            <p> <i class='bx bx-phone'></i>phone : (92)000-00000000</p>
+            <p> <i class='bx bxl-envelop'></i>E-mail : ThaiShose@gmail.com</p>
+
+        </div>
+        </div>
+        
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.000608631044!2d67.06286237441341!3d25.000095277838415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb34119e8d20e11%3A0x3586f7b7c73d4baf!2sAptech%20Learning%20Surjani%20Center!5e0!3m2!1sen!2s!4v1696052008142!5m2!1sen!2s" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border-radius: 50px;"></iframe>
+        </div>
+        <!-- /* Footer's HTML has been started */ -->
+
+        <footer>
+            <div class="container01">
+                <br><br><br><br>
+                <footer>
+                    <div class="navbar1">
+                        <div class="logo-warp1">
+                            <div class="logo1"><a href="backtosummer.html">
+                                    <H1><b style="color: white;">BackTo <span>Summer</span></b></H1>
+                                </a></div>
+                        </div>
+                        <ul class="main1">
+                            <li><a href="backtosummer.html">Home <i class='bx bx-chevrons-down'></i></a></li>
+                            <li><a href="collection.html">Collection <i class='bx bx-chevrons-down'></i></a></li>
+                            <li><a href="order.html">Order <i class='bx bx-chevrons-down'></i></a></li>
+                            <li><a href="about.html">About <i class='bx bx-chevrons-down'></i></a></li>
+                            <li><a href="services.html">Services <i class='bx bx-chevrons-down'></i></a></li>
+                            <li><a href="contect us.html">Contect Us <i class='bx bx-chevrons-down'></i></a></li>
+                        </ul>
+
+
+                    </div>
+                </footer>
+                <div class="footer">
+                    <div class="col">
+                        <h1>Catalog</h1>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Coutes</a></li>
+                                <li><a href="#">T-shirt</a></li>
+                                <li><a href="#">Shirt</a></li>
+                                <li><a href="#">Shose</a></li>
+                                <li><a href="#">Other Use full Things</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Col">
+                        <h1>Phone</h1>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">(00)000-0000000</a></li>
+                                <li><a href="#">(00)000-0000000</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h1>Contect</h1>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Backtosummer@gmail.com</a></li>
+                                <li><a href="#">Karachi, Pakistan.</a></li>
+                                <li><a href="#">Time : 24 / 7</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h1>Instagram</h1>
+                        <div class="list asd">
+                            <img src="backimg/suit-869380_1280-1.jpg" width="10%">
+                            <img src="backimg/photo-1543322748-33df6d3db806.jpeg" alt="">
+                            <img src="backimg/pexels-hasib-khorami-1496647.jpg" width="10%" alt="">
+                            <img src="backimg/pexels-terje-sollie-298863.jpg" width="10%" alt="">
+                        </div>
+                        <div class="list">
+                            <h3>Follow on Instagram & facebook</h3>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <h1>News Latter</h1>
+                        <div class="list">
+                            <input type="text" placeholder="Enter your Nmae :"><br>
+                            <input type="password" placeholder="Enter your Password :"><br>
+                            <button type="submit">Sumit</button>
+                            <br><br>
+                            <hr>
+                            <div class="icon">
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-tiktok'></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <center>
+                        <div class="copy">
+                            <p><span>BackTo Summer</span> <a href="#"><i class='bx bx-copyright'></i></a> 2023 | All
+                                rights
+                                Reserved</p>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </footer>
+        <!-- /* Footer's HTML has been ended */ -->
+
+</body>
+
+</html>

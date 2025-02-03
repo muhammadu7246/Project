@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\MVC.net\\backerbite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|e:\\mvc.net\\backerbite\\backerbite\\pages\\prectice_work.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|solutionrelative:backerbite\\pages\\prectice_work.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|e:\\mvc.net\\backerbite\\backerbite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|solutionrelative:backerbite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|e:\\mvc.net\\backerbite\\backerbite\\pages\\prectice_work.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|solutionrelative:backerbite\\pages\\prectice_work.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|e:\\mvc.net\\backerbite\\backerbite\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|solutionrelative:backerbite\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|e:\\mvc.net\\backerbite\\backerbite\\pages\\contect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|solutionrelative:backerbite\\pages\\contect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|e:\\mvc.net\\backerbite\\backerbite\\pages\\master.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E523ECBB-E586-41D6-8507-4D60FD1F9A70}|backerbite\\backerbite.csproj|solutionrelative:backerbite\\pages\\master.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\MVC.net\\backerbite\\backerbite\\Program.cs",
+              "RelativeDocumentMoniker": "backerbite\\Program.cs",
+              "ToolTip": "E:\\MVC.net\\backerbite\\backerbite\\Program.cs",
+              "RelativeToolTip": "backerbite\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T18:05:09.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Prectice_work.cshtml.cs",
+              "DocumentMoniker": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Prectice_work.cshtml.cs",
+              "RelativeDocumentMoniker": "backerbite\\Pages\\Prectice_work.cshtml.cs",
+              "ToolTip": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Prectice_work.cshtml.cs",
+              "RelativeToolTip": "backerbite\\Pages\\Prectice_work.cshtml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T18:02:17.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Prectice_work.cshtml",
+              "DocumentMoniker": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Prectice_work.cshtml",
+              "RelativeDocumentMoniker": "backerbite\\Pages\\Prectice_work.cshtml",
+              "ToolTip": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Prectice_work.cshtml",
+              "RelativeToolTip": "backerbite\\Pages\\Prectice_work.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T18:01:07.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "master.cshtml",
+              "DocumentMoniker": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\master.cshtml",
+              "RelativeDocumentMoniker": "backerbite\\Pages\\master.cshtml",
+              "ToolTip": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\master.cshtml",
+              "RelativeToolTip": "backerbite\\Pages\\master.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwCwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T17:47:56.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Contect.cshtml",
+              "DocumentMoniker": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Contect.cshtml",
+              "RelativeDocumentMoniker": "backerbite\\Pages\\Contect.cshtml",
+              "ToolTip": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Contect.cshtml",
+              "RelativeToolTip": "backerbite\\Pages\\Contect.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T17:46:45.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "backerbite\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\MVC.net\\backerbite\\backerbite\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "backerbite\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAArwIcAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T17:39:54.074Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
